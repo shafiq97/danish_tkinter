@@ -27,15 +27,15 @@ image = canvas.create_image(0, 0, anchor='nw', image=imagefile)
 canvas.pack(side='top')
 
 # label user name and password
-Label(window, text='USER NAME:',  background="lightblue",).place(x=99, y=150)
-Label(window, text='PASSWORD:',  background="lightblue",).place(x=99, y=190)
+Label(window, text='USER NAME:',  background="blue",).place(x=99, y=150)
+Label(window, text='PASSWORD:',  background="blue",).place(x=99, y=190)
 # input user name
 var_usr_name = StringVar()
-entry_usr_name = Entry(window, textvariable=var_usr_name,  background="grey",)
+entry_usr_name = Entry(window, textvariable=var_usr_name,  background="lightblue",)
 entry_usr_name.place(x=170, y=150)
 # input password
 var_usr_pwd = StringVar()
-entry_usr_pwd = Entry(window, textvariable=var_usr_pwd,  background="grey", show='#')
+entry_usr_pwd = Entry(window, textvariable=var_usr_pwd,  background="lightblue", show='#')
 entry_usr_pwd.place(x=170, y=190)
 
 # LOG IN DETAIL
@@ -70,7 +70,7 @@ def usr_log_in():
                     my_tree.item(rowid, tags="checked")
 
             root = Tk()
-            root.configure(background="lightblue")
+            root.configure(background="blue")
             root.title('TAKING OFF LIST')
             root.geometry("760x600+300+50")
 
@@ -2633,7 +2633,7 @@ def usr_log_in():
                     root.deiconify()
 
                 tko = Tk()
-                tko.configure(background="lightblue")
+                tko.configure(background="blue")
                 tko.title('TAKING OFF PAPER')
                 tko.geometry("800x600+280+30")
 
@@ -3001,18 +3001,18 @@ def usr_log_in():
                 total_cost_box.insert(0, 0)
 
                 # button confirm unit
-                confirm = Button(tko, text="CONFIRM UNIT", command=unit_confirm, width=21, background="green")
+                confirm = Button(tko, text="CONFIRM UNIT", command=unit_confirm, width=21, background="blue")
                 confirm.place(x=625, y=420)
 
                 # button calculation
-                calculation = Button(tko, text="CALCULATE", width=21, command=calculate, background="blue")
+                calculation = Button(tko, text="CALCULATE", width=21, command=calculate, background="green")
                 calculation.place(x=625, y=450)
 
                 # button back
-                calculation = Button(tko, text="BACK", width=21, command=back, background="brown")
-                calculation.place(x=625, y=570)
+                calculation = Button(tko, text="BACK", width=21, command=back, background="pink")
+                calculation.place(x=625, y=480)
 
-                calculation = Button(tko, text="CLEAR CANVAS", width=21, background="purple", command=lambda: canvas.delete("all"))
+                calculation = Button(tko, text="CLEAR CANVAS", width=21, background="brown", command=lambda: canvas.delete("all"))
                 calculation.place(x=625, y=600)
 
                 # button delete
@@ -3020,12 +3020,12 @@ def usr_log_in():
                 calculation.place(x=625, y=540)
 
                 # button save to excel
-                save_excel = Button(tko, text="SAVE TO EXCEL", command=save, width=21,background="lightblue")
+                save_excel = Button(tko, text="SAVE TO EXCEL", command=save, width=21,background="purple")
                 save_excel.place(x=625, y=510)
 
                 # button clear to calculation
-                clear_calculation = Button(tko, text="CLEAR CALCULATION", command=clear_calculat, width=21, background="yellow")
-                clear_calculation.place(x=625, y=480)
+                clear_calculation = Button(tko, text="CLEAR CALCULATION", command=clear_calculat, width=21, background="orange")
+                clear_calculation.place(x=625, y=570)
 
                 # canvas
                 def locate_xy(event):
@@ -3066,8 +3066,8 @@ def usr_log_in():
                     id = canvas.create_rectangle((10, 100, 30, 120), fill="red")
                     canvas.tag_bind(id, '<Button-1>', lambda x: show_color("red"))
 
-                    id = canvas.create_rectangle((10, 130, 30, 150), fill="yellow")
-                    canvas.tag_bind(id, '<Button-1>', lambda x: show_color("yellow"))
+                    id = canvas.create_rectangle((10, 130, 30, 150), fill="orange")
+                    canvas.tag_bind(id, '<Button-1>', lambda x: show_color("orange"))
 
                     id = canvas.create_rectangle((10, 160, 30, 180), fill="blue")
                     canvas.tag_bind(id, '<Button-1>', lambda x: show_color('blue'))
@@ -3155,7 +3155,7 @@ def usr_log_in():
             add_taking_off_paper.place(x=620, y=50)
 
             # remove one
-            remove_one = Button(button_frame, text="DELETE RECORD", command=remove_one, width=15, background="yellow")
+            remove_one = Button(button_frame, text="DELETE RECORD", command=remove_one, width=15, background="orange")
             remove_one.grid(row=0, column=2, padx=10)
 
             # remove all
@@ -3238,7 +3238,7 @@ def usr_sign_quit():
 # LOG IN, REGISTER AND EXIT BUTTON
 bt_login = Button(window, text='LOG IN', background="green", command=usr_log_in)
 bt_login.place(x=100, y=230)
-bt_logup = Button(window, text='REGISTER', background="yellow"
+bt_logup = Button(window, text='REGISTER', background="orange"
 , command=usr_sign_up)
 bt_logup.place(x=180, y=230)
 bt_logquit = Button(window, text='EXIT', background="red", command=usr_sign_quit)
