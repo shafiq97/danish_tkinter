@@ -27,15 +27,15 @@ image = canvas.create_image(0, 0, anchor='nw', image=imagefile)
 canvas.pack(side='top')
 
 # label user name and password
-Label(window, text='USER NAME:', font=("Helvetica", 16), background="lightblue",).place(x=99, y=150)
-Label(window, text='PASSWORD:', font=("Helvetica", 16), background="lightblue",).place(x=99, y=190)
+Label(window, text='USER NAME:',  background="lightblue",).place(x=99, y=150)
+Label(window, text='PASSWORD:',  background="lightblue",).place(x=99, y=190)
 # input user name
 var_usr_name = StringVar()
-entry_usr_name = Entry(window, textvariable=var_usr_name, font=("Helvetica", 16), background="grey",)
+entry_usr_name = Entry(window, textvariable=var_usr_name,  background="grey",)
 entry_usr_name.place(x=170, y=150)
 # input password
 var_usr_pwd = StringVar()
-entry_usr_pwd = Entry(window, textvariable=var_usr_pwd, font=("Helvetica", 16), background="grey", show='#')
+entry_usr_pwd = Entry(window, textvariable=var_usr_pwd,  background="grey", show='#')
 entry_usr_pwd.place(x=170, y=190)
 
 # LOG IN DETAIL
@@ -3001,30 +3001,30 @@ def usr_log_in():
                 total_cost_box.insert(0, 0)
 
                 # button confirm unit
-                confirm = Button(tko, text="CONFIRM UNIT", command=unit_confirm, width=21, highlightbackground="green")
+                confirm = Button(tko, text="CONFIRM UNIT", command=unit_confirm, width=21, background="green")
                 confirm.place(x=625, y=420)
 
                 # button calculation
-                calculation = Button(tko, text="CALCULATE", width=21, command=calculate, highlightbackground="blue")
+                calculation = Button(tko, text="CALCULATE", width=21, command=calculate, background="blue")
                 calculation.place(x=625, y=450)
 
                 # button back
-                calculation = Button(tko, text="BACK", width=21, command=back, highlightbackground="brown")
+                calculation = Button(tko, text="BACK", width=21, command=back, background="brown")
                 calculation.place(x=625, y=570)
 
-                calculation = Button(tko, text="CLEAR CANVAS", width=21, highlightbackground="purple", command=lambda: canvas.delete("all"))
+                calculation = Button(tko, text="CLEAR CANVAS", width=21, background="purple", command=lambda: canvas.delete("all"))
                 calculation.place(x=625, y=600)
 
                 # button delete
-                calculation = Button(tko, text="CLEAR EXCEL SHEET", width=21, command=delete, highlightbackground="pink")
+                calculation = Button(tko, text="CLEAR EXCEL SHEET", width=21, command=delete, background="pink")
                 calculation.place(x=625, y=540)
 
                 # button save to excel
-                save_excel = Button(tko, text="SAVE TO EXCEL", command=save, width=21,highlightbackground="lightblue")
+                save_excel = Button(tko, text="SAVE TO EXCEL", command=save, width=21,background="lightblue")
                 save_excel.place(x=625, y=510)
 
                 # button clear to calculation
-                clear_calculation = Button(tko, text="CLEAR CALCULATION", command=clear_calculat, width=21, highlightbackground="yellow")
+                clear_calculation = Button(tko, text="CLEAR CALCULATION", command=clear_calculat, width=21, background="yellow")
                 clear_calculation.place(x=625, y=480)
 
                 # canvas
@@ -3143,11 +3143,11 @@ def usr_log_in():
             button_frame = Frame(root)
             button_frame.place(x=100, y=440)
             # button add
-            add_button = Button(button_frame, text="ADD RECORD", command=add_item, width=15, highlightbackground="green")
+            add_button = Button(button_frame, text="ADD RECORD", command=add_item, width=15, background="green")
             add_button.grid(row=0, column=0, padx=10)
 
             # button log out
-            log_out_button = Button(root, text="LOG OUT", command=log_out, width=15, highlightbackground="red")
+            log_out_button = Button(root, text="LOG OUT", command=log_out, width=15, background="red")
             log_out_button.place(x=630, y=550)
 
             # button taking off paper
@@ -3155,15 +3155,15 @@ def usr_log_in():
             add_taking_off_paper.place(x=620, y=50)
 
             # remove one
-            remove_one = Button(button_frame, text="DELETE RECORD", command=remove_one, width=15, highlightbackground="yellow")
+            remove_one = Button(button_frame, text="DELETE RECORD", command=remove_one, width=15, background="yellow")
             remove_one.grid(row=0, column=2, padx=10)
 
             # remove all
-            remove_all = Button(button_frame, text="DELETE ALL RECORD", command=remove_all, width=15, highlightbackground="red")
+            remove_all = Button(button_frame, text="DELETE ALL RECORD", command=remove_all, width=15, background="red")
             remove_all.grid(row=0, column=3, padx=10)
 
             # save update
-            save_record = Button(button_frame, text="UPDATE RECORD", command=save_record, width=15, highlightbackground="blue")
+            save_record = Button(button_frame, text="UPDATE RECORD", command=save_record, width=15, background="blue")
             save_record.grid(row=0, column=1, padx=10)
 
             # bind select record
@@ -3228,7 +3228,7 @@ def usr_sign_up():
     Entry(window_sign_up, textvariable=new_pwd_confirm, show='*').place(x=160, y=90)
     # CONFIRM SIGN UP BUTTON
     bt_confirm_sign_up = Button(window_sign_up, text='CONFIRM SIGN UP',
-                                   command=signtowcg, highlightbackground="green")
+                                   command=signtowcg, background="green")
     bt_confirm_sign_up.place(x=150, y=130)
 
 # EXIT FUNCTION
@@ -3236,12 +3236,12 @@ def usr_sign_quit():
     window.destroy()
 
 # LOG IN, REGISTER AND EXIT BUTTON
-bt_login = Button(window, text='LOG IN', highlightbackground="green", command=usr_log_in)
+bt_login = Button(window, text='LOG IN', background="green", command=usr_log_in)
 bt_login.place(x=100, y=230)
-bt_logup = Button(window, text='REGISTER', highlightbackground="yellow"
+bt_logup = Button(window, text='REGISTER', background="yellow"
 , command=usr_sign_up)
 bt_logup.place(x=180, y=230)
-bt_logquit = Button(window, text='EXIT', highlightbackground="red", command=usr_sign_quit)
+bt_logquit = Button(window, text='EXIT', background="red", command=usr_sign_quit)
 bt_logquit.place(x=260, y=230)
 
 window.mainloop()
